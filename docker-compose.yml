@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    container_name: api-escola
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta o diretório atual no contêiner para desenvolvimento
+      # Alterações no seu código local serão refletidas imediatamente no contêiner
+      - .:/app
